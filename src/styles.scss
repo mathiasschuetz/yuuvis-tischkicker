@@ -1,22 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
-
-@font-face {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: normal;
-  src: local("Roboto"), local("Roboto-Regular"),
-    url(https://fonts.googleapis.com/css?family=Roboto&display=swap) format("woff2");
-}
-
 * {
   font-family: "Roboto", sans-serif;
   font-weight: normal;
-  font-size: 1.5rem;
 }
 
+html,
 body {
   height: 100%;
-  width: 100%;
-  background-color: #eeeeee;
+}
+body {
   margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #eeeeee;
 }

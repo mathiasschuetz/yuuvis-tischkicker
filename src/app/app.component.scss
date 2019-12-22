@@ -1,11 +1,25 @@
-#content {
-  margin-top: 5%;
-  margin-left: 30%;
-  margin-right: 30%;
-  margin-bottom: 5%;
-  background-color: #fff;
+#title {
+  position: absolute;
+  left: calc(25% - 24px);
+  font-size: 1.5rem;
 }
 
-.boxShadow {
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+#content {
+  background-color: #fff;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  min-height: 80%;
+  width: 50%;
+  margin-left: calc(-25% - 24px);
+  padding: 24px;
+
+  table {
+    width: 100%;
+  }
+}
+
+button {
+  height: 45px;
+  width: 120px;
 }

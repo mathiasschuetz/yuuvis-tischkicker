@@ -1,3 +1,40 @@
-<div id="content" class="boxShadow">
-Testasdasdasdasd
+<div id="title">
+  <h1>{{title}}</h1>
+</div>
+<div id="content" class="mat-elevation-z8">
+  <button mat-raised-button color="primary" (click)="addGame()">
+    <mat-icon>add</mat-icon>
+    Test
+  </button>
+  <!-- <mat-tab-group mat-stretch-tabs>
+    <mat-tab label="Rangliste"> -->
+  <table mat-table matSort [dataSource]="dataSourcePlayers">
+
+    <!-- Platz Column -->
+    <ng-container matColumnDef="ranking">
+      <th mat-header-cell *matHeaderCellDef> Platz </th>
+      <td mat-cell *matCellDef="let element; let i = index;"> {{i + 1}} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="fullname">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.fullname}} </td>
+    </ng-container>
+
+    <!-- Goals Column -->
+    <ng-container matColumnDef="goals">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Tore </th>
+      <td mat-cell *matCellDef="let element"> {{element.goals}} </td>
+    </ng-container>
+
+    <!-- Wins Column -->
+    <ng-container matColumnDef="wins">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Wins </th>
+      <td mat-cell *matCellDef="let element"> {{element.wins}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
 </div>
